@@ -1,0 +1,99 @@
+timestamp: 2013-03-16T19:15:28.889611
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2013-03-16T19:15:29.049200
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-03-16T19:15:29.161156
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2013-03-16T19:15:29.274779
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2013-03-16T19:15:29.386402
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-03-16T19:15:29.498178
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2013-03-31T16:06:35.911759
+CREATE TABLE Personal(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    pid INTEGER,
+    Age INTEGER,
+    Gender CHAR(512),
+    Contact INTEGER
+);
+success!
+timestamp: 2013-03-31T16:06:36.046031
+CREATE TABLE Education(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    eid INTEGER,
+    Deg CHAR(512),
+    Branch CHAR(512),
+    Duration INTEGER,
+    Accomplishments CHAR(512)
+);
+success!
+timestamp: 2013-03-31T16:06:36.202259
+CREATE TABLE Merit(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    mid INTEGER,
+    XMarks INTEGER,
+    XIIMarks INTEGER,
+    CGPA INTEGER
+);
+success!
+timestamp: 2013-03-31T16:06:36.347196
+CREATE TABLE Experience(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    exid INTEGER,
+    Company CHAR(512),
+    Duration INTEGER,
+    Post CHAR(512),
+    Accomplishments CHAR(512)
+);
+success!
+timestamp: 2013-04-13T07:20:55.070762
+ALTER TABLE Personal ADD google CHAR(512);
+timestamp: 2013-04-13T07:20:55.211838
+ALTER TABLE Personal ADD fb CHAR(512);
+timestamp: 2013-04-13T07:20:55.354075
+ALTER TABLE Personal ADD image CHAR(512);

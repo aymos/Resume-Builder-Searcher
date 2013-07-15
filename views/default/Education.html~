@@ -1,0 +1,9 @@
+{{=URL('static','glissade/style.css')}}
+{{=form}}
+<pre>
+	<a href="http://127.0.0.1:8000/shipra/default/Merit"><button type="button" name="Next">NEXT</button></a>
+</pre>
+<pre>
+	<a href="http://127.0.0.1:8000/shipra/default/Personal"><button type="button" name="Previous">PREVIOUS</button></a>
+</pre>
+

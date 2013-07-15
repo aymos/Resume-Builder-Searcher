@@ -1,0 +1,54 @@
+ <script src="{{=URL('static','glissade/style.css')}}"></script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RESUME : Builder & Searcher </title>
+<link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css" />
+<link href="{{=URL('static', 'glissade/style.css')}}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+	<style>
+	.right
+	{
+	float:right;
+	width:300px;
+	}
+	</style>
+	
+<div id="wrapper">
+	<div id="logo" class="container">
+	
+		<h1 style="color:#F87217">resume</h1>
+		<p>Searcher and Builder</p>
+	</div>
+
+	<div class="right">
+	
+		{{=auth.navbar()}}
+	</div>
+	
+	<br/>
+	
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href=http://127.0.0.1:8000/shipra/default/index>Homepage</a>  </li>
+				<li><a href="#">view resume</a></li>
+				<li><a href="http://127.0.0.1:8000/shipra/default/create">Update resume</a></li>
+				<li><a href="#">Download Resume</a></li>
+				<li><a href="#">search</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+	{{include}}
+<div id="footer">
+	<p>© Somya Mehdiratta , Shipra Banga </a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

@@ -1,0 +1,5 @@
+{{extend 'layout.html'}}
+<a href="http://127.0.0.1:8000/shipra/default/Personal"><button type="button" name="Personal"> Personal </button></a><br/><br/>
+<a href="http://127.0.0.1:8000/shipra/default/Education"><button type="button" name="Education">Education </button></a><br/><br/>
+<a href="http://127.0.0.1:8000/shipra/default/Merit"><button type="button" name="Merit">Merit</button></a><br/><br/>
+<a href="http://127.0.0.1:8000/shipra/default/Experience"><button type="button" name="Experience"> Experience </button></a><br/><br/>

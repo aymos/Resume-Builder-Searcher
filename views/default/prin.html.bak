@@ -1,0 +1,35 @@
+{{extend 'layout.html'}}
+<p><h3>PERSONAL</h3></p><br/>
+<ol>
+	<li> First Name : {{=cont[0]['first_name']}}</li><br/>
+	<li> Last Name : {{=cont[0]['last_name']}}</li><br/>
+	<li> Email: {{=cont[0]['email']}}</li><br/>
+	<li> Age    : {{=pers[0]['Age']}}</li><br/>
+	<li> Gender : {{=pers[0]['Gender']}}</li><br/>
+	<li>Contact : {{=pers[0]['Contact']}}</li><br/>
+</ol>
+<br/><br/><br/>
+<p><h3>EDUCATION</h3></p><br/>
+<ol>
+	<li>Degree  :{{=edu[0]['Deg']}}</li><br/>
+	<li>Branch  :{{=edu[0]['Branch']}}</li><br/>
+	<li>Duration:{{=edu[0]['Duration']}}</li><br/>
+	<li>Accomplishments:{{=edu[0]['Accomplishments']}}</li><br/>
+</ol>
+<br/><br/><br/>
+<p><h3>MERIT</h3></p><br/>
+<ol>
+	<li>Marks in X :{{=mer[0]['XMarks']}}</li><br/>
+	<li>Marks in XII  :{{=mer[0]['XIIMarks']}}</li><br/>
+	<li>Cgpa:{{=mer[0]['CGPA']}}</li><br/>
+</ol>
+<br/><br/><br/>
+<p><h3>EXPERIENCE</h3></p><br/>
+<ol>
+	<li>Company  :{{=exp[0]['Company']}}</li><br/>
+	<li>Duration  :{{=exp[0]['Duration']}}</li><br/>
+	<li>Post:{{=exp[0]['Post']}}</li><br/>
+	<li>Accomplishments:{{=exp[0]['Accomplishments']}}</li><br/>
+</ol>
+
+
